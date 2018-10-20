@@ -26,7 +26,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|user_id|integer|foreign_key: true, index: true|
+|user_id|references|foreign_key: true, index: true|
 
 ### Association
 - has_many :users, through: :members
@@ -38,8 +38,8 @@
 |------|----|-------|
 |message|text|null: false|
 |image|text||
-|user_id|integer|null: false, foreign_key: true, index: true|
-|group_id|integer|null: false, foreign_key: true, index: true|
+|user_id|references|null: false, foreign_key: true, index: true|
+|group_id|referencew|null: false, foreign_key: true, index: true|
 
 ### Association
 - belongs_to :user
