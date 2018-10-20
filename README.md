@@ -20,11 +20,13 @@
 ### Association
 - has_many :groups, through: :members
 - has_many :members
+- has_many :message
 
 ## Groups table
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
+|user_id|integer|foreign_key: true, index: true|
 
 ### Association
 - has_many :users, through: :members
@@ -34,22 +36,14 @@
 ## messages table
 |Column|Type|Options|
 |------|----|-------|
-|message|text|null: false, index: true|
+|message|text|null: false|
+|image|text||
+|user_id|integer|null: false, foreign_key: true, index: true|
+|group_id|integer|null: false, foreign_key: true, index: true|
 
 ### Association
 - belongs_to :group
 - belongs_to :user
-
-## Pictures table
-|Column|Type|Options|
-|------|----|-------|
-|image|text|null: false, index: true|
-
-### Association
-- belongs_to :user
-- belongs_to :message
-- belongs_to :group
-
 
 
 
