@@ -3,7 +3,7 @@
 ## members table
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true, index: true|
+|user_id|integer|t.references: user, foreign_key: true, index: true|
 |group_id|integer|null: false, foreign_key: true, index: true|
 
 ### Association
