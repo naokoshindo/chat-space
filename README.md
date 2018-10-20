@@ -39,7 +39,7 @@
 |message|text|null: false|
 |image|text||
 |user_id|references|null: false, foreign_key: true, index: true|
-|group_id|referencew|null: false, foreign_key: true, index: true|
+|group_id|references|null: false, foreign_key: true, index: true|
 
 ### Association
 - belongs_to :user
