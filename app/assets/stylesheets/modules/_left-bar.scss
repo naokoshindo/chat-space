@@ -7,18 +7,25 @@
       background-color: #253141;
       padding-right: 20px;
       padding-left: 20px;
-        span {
+        h3 {
           color: $left-bar_text;
           font-size: 16px;
           font-weight: bold;
           line-height: 7em;
-          padding-right: 95px;
+          display: inline-block;
         }
-        i {
-          font-size: 18px;
-          color: $white;
+        ul {
+          float: right;
+          line-height: 7em;
+        }
+        li {
+          list-style: none;
+          font-size: 20px;
           padding-right: 5px;
-          font-weight: 400;
+          display: inline-block;
+        }
+        .icon {
+          color: $white;
         }
     }
     .bar-bottom {
