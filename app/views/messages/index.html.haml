@@ -4,42 +4,6 @@
 .message-bar
   %p グループが追加されました
 .left-bar
-  .bar-top
-    %span.class_username
-      ABCD EFGH
-    %i.far.fa-edit
-    %i.fa.fa-cog
-  .bar-bottom
-    .group1
-      %p Group1
-    .group1-message
-      %p メッセージ
-    .group2
-      %p Group2
-    .group2-message
-      %p メッセージはまだありません
-    .group3
-      %p Group3
-    .group3-message
-      %p メッセージはまだありません
+  = render "left-bar"
 .contents
-  .contents-top
-    %span.class_username
-      Sampleグループ
-    %p Members: aaaaa bbbbb ccccc
-    .edit-link
-      edit
-  .contents-main
-    %ul
-      %li<>
-        ABCD EFGH
-      %li__time<>
-        2018/12/12 22:22:22
-    %p なるほど
-  .contents-bottom
-    .message-form
-    .picture-button
-      %i.far.fa-image
-    .send-button
-      SEND
-
+  = render "contents"
