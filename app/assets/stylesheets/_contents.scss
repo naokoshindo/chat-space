@@ -74,6 +74,9 @@
           width: 75%;
           background-color: $white;
           float: left;
+          color:$contents_info;
+          line-height: 50px;
+          padding-left: 10px;
         }
         .picture-button {
           height: 50px;
@@ -86,6 +89,7 @@
           margin-right: 15px;
           i {
             font: 20px;
+            font-weight: 400;
           }
         }
         .send-button {
