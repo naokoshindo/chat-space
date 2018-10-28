@@ -1,0 +1,111 @@
+.contents {
+  width: calc(100vw - 300px);
+  background-color: $white;
+  float: right;
+  height: 100%;
+
+    .contents-top {
+      height: 55px;
+      background-color: $white;
+      border-bottom-style: solid;
+      border-bottom-color: #eeeeee;
+      padding-top: 35px;
+      padding-left: 40px;
+      padding-right: 40px;
+        span {
+          font-size: 20px;
+          color: #333333;
+          padding-bottom: 15px;
+        }
+        p {
+          font-size: 12px;
+          color: $contents_info;
+        }
+        .edit-link {
+          height: 40px;
+          width: 70px;
+          float: right;
+          text-align: center;
+          line-height: 40px;
+          margin: 0 20px;
+          position: absolute;
+          right: 0px;
+          top: 30px;
+          border: solid;
+          border-color: $skyblue_back;
+          color: $skyblue_back;
+        }
+    }
+
+    .contents-main {
+      height: calc(100vh - 70px - 90px - 46px);
+      background-color: $white
+      ;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 46px;
+        li {
+          list-style: none;
+          padding-right: 10px;
+          font-size: 16px;
+          color: $contents_main;
+          padding-bottom: 10px;
+          display: inline-block;
+          &__time {
+            font-size: 12px;
+            color: $contents_info;
+          }
+        }
+        p {
+          font-size: 14px;
+          color: $contents_main;
+        }
+    }
+
+    .contents-bottom {
+      height: 50px;
+      background-color: #F2F2F2;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+        .message-form {
+          height: 50px;
+          width: 75%;
+          background-color: $white;
+          float: left;
+          color:$contents_info;
+          line-height: 50px;
+          padding-left: 10px;
+        }
+        .picture-button {
+          height: 50px;
+          width: 70px;
+          background-color: $white;
+          display: inline-block;
+          text-align: center;
+          line-height: 50px;
+          padding-right: 10px;
+          margin-right: 15px;
+          i {
+            font: 20px;
+            font-weight: 400;
+          }
+        }
+        .send-button {
+          height: 40px;
+          width: 70px;
+          float: right;
+          text-align: center;
+          line-height: 40px;
+          margin: 0 20px;
+          position: absolute;
+          right: 0px;
+          bottom: 0px;
+          border: solid;
+          background-color: $skyblue_back;
+          border-color: $skyblue_back;
+          color: $white;
+        }
+    }
+}
