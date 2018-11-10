@@ -1,6 +1,6 @@
 # README
 
-## members table
+## group_users table
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|foreign_key: true, index: true|
@@ -18,20 +18,20 @@
 |pasword|string|null: false|
 
 ### Association
-- has_many :groups, through: :members
-- has_many :members
-- has_many :message
+- has_many :groups, through: :group_users
+- has_many :group_users
+- has_many :messages
 
 ## Groups table
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|name|string|null: false, unique: true, index: true|
 |user_id|references|foreign_key: true, index: true|
 
 ### Association
-- has_many :users, through: :members
-- has_many :members
-- accepts_nested_attributes_for :members
+- has_many :users, through: :group_users
+- has_many :group_users
+- accepts_nested_attributes_for :users
 
 ## messages table
 |Column|Type|Options|
