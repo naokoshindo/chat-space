@@ -16,7 +16,8 @@
           - @group.users.each do |user|
             =user.name
     .right-header
-      .right-header__button Edit
+      .right-header__button
+        = link_to 'Edit', "/groups/#{@group.id}/edit"
   .messages
     = render @messages
   .form
