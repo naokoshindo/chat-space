@@ -43,5 +43,35 @@ $(function(){
     .always(function(){
       $(".form__submit").prop("disabled", false);
     })
-  })
+
+    $(function(){
+      setInterval(update, 3000);
+    });
+    function update(){
+      if($('.messages')[0]){
+        var message_id = $('.message:last').data('message-id');
+      }
+      else {
+        var message_id = 0
+      }
+      $.ajax({
+        url: window.location.href,
+        type: 'GET',
+        data: { message: { id: message_id }
+        },
+        dataType: 'json'
+      })
+      .done(function(data){
+        var id = $('.messages').data('message-id');
+        var insertHTML = '';
+        $.each(data, function(i, data){
+          if (message_id > id ) {
+            insertHTML += buildHTML(data);
+          }
+        });
+        $('.messages').append(insertHTML)
+        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast')
+      });
+    }
+  });
 });
