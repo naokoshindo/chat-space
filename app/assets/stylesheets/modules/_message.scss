@@ -26,7 +26,7 @@
         }
       }
     }
-    .right-header {
+    a.right-header {
       border: 1px solid $light_blue;
       color: $light_blue;
       position: absolute;
@@ -35,14 +35,10 @@
       line-height: 40px;
       margin-top: 28px;
       padding: 0 20px;
-      width:
-      &__button {
-        color: $light_blue;
-        text-decoration: none;
-        position: absolute;
+      width: 35px;
+      text-decoration: none;
       }
     }
-  }
 
   .messages {
     background-color: #FAFAFA;
